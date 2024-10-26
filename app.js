@@ -6,6 +6,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const cors = require("cors");
+const morgan = require("morgan");
 const userRoutes = require("./routes/userRouter");
 const postRoutes = require("./routes/postRouter");
 const notificationRoutes = require("./routes/notificationRouter");
