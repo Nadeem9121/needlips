@@ -46,6 +46,12 @@ app.use(xss());
 app.use(hpp({}));
 
 // Routers
+app.get("/", (req, res) => {
+  res.status(200).send({
+    success: true,
+    message: "Welcome to needlips backend",
+  });
+});
 app.use("/api", followAndUnfollowRouter);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
